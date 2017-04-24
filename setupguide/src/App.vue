@@ -1,21 +1,3 @@
-<!-- <template>
-  <div id="app">
-    <h1>Hello World</h1>
-    <h2>{{ msg }}</h2>
-  </div>
-</template>
-
-<script>
-export default {
-  name: 'app',
-  data () {
-    return {
-      msg: 'what vue know \'bout this!? 🤓'
-    }
-  }
-}
-</script> -->
-
 <template>
   <div id="app">
     <h1>Lets go somewhere</h1>

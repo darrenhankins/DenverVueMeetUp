@@ -10,7 +10,7 @@
  4. broserify-simple
  5. simple
 
-## Get started!
+### Get started!
 - Install nodeJS if you dont have it already
 - Then, in terminal type:
 
@@ -39,6 +39,7 @@ npm run dev
 
 - After this is set up I like to delete the template things. like the contents of the assets folder and most of the content in the app.vue file. (We can keep the assets folder for our own media)
 ---
+## Vue-Router
 - Now lets get set up with some practical dependencies, like vue-Router and Axios / (or vuex).
 
 - (vue-router allows us to parse the url and load different components as pages.)
@@ -56,6 +57,13 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 ```
 - Vue.use allows us to use the dependencies
+- Before creating our routes we can create our components for each route we want. We do this by creating .vue files in the component folder we can then make a small template for each component to be viewed later on. For example for a home.vue page we could simply put:
+
+```
+<template lang="html">
+  <h1>I'm Home!</h1>
+</template>
+```
 
 - We need to add a routes.js file in the src folder where we can now define our components and make it look something like this:
 
@@ -68,6 +76,11 @@ export const routes = [
   { path: '/users', component: users, name: 'users'},
   { path: '*', redirect: '/'}
 ];
+```
+- In order to use these routes we should go back to our main.js file and import our routes at the top like so:
+
+```
+import { routes } from './routes';
 ```
 
 - Next we should register these routes in our main.js file. Ill add history mode to clean up our url and alter the new Vue instance to accept our router const.
@@ -84,4 +97,4 @@ const router = new VueRouter({
     render: h => h(App)
   })
   ```
-- Lastly we need to define a place where vuejs should render the routes we're navigating to. That is done by adding a <router-view></router-view>. It will take this place and put the component which gets loaded conditionally 
+- Lastly we need to define a place where vuejs should render the routes we're navigating to. That is done by adding a <router-view></router-view>. It will take this place and put the component which gets loaded conditionally
