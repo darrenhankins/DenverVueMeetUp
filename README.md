@@ -98,3 +98,5 @@ const router = new VueRouter({
   })
   ```
 - Lastly we need to define a place where vuejs should render the routes we're navigating to. That is done by adding a <router-view></router-view>. It will take this place and put the component which gets loaded conditionally
+
+-

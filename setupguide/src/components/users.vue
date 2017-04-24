@@ -1,4 +1,9 @@
 
 <template lang="html">
-  <h1>Users Overview</h1>
+  <div id="app">
+    <h1>Users Overview</h1>
+    <router-link to="home">
+      <p>Home</p>
+    </router-link>
+  </div>
 </template>
